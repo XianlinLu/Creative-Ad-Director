@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-Meme Merchant 是一个面向 Lumina 画布的电商短广告 Skill。它可以从商品 URL、商品素材或一句销售需求开始，先建立可追溯的商品证据，再创作带剧情、偏搞笑、便于拆分测试的短广告。
+Meme Market 是一个面向 Lumina 画布的电商短广告 Skill。它可以从商品 URL、商品素材或一句销售需求开始，先建立可追溯的商品证据，再创作带剧情、偏搞笑、便于拆分测试的短广告。
 
 整体流程参考 [Cinema-Craft](https://github.com/XianlinLu/Cinema-Craft) 的“画布产物优先、原生确认、连续制作、可编辑交付”方法，并针对电商广告补充了：
 
