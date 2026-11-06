@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-Meme Merchant is a Lumina Canvas skill for turning a product URL, product media, or a short selling brief into evidence-grounded, funny, conversion-focused short ads. It adapts the artifact-first, native-review, production, and editable-delivery discipline of [Cinema-Craft](https://github.com/XianlinLu/Cinema-Craft) to ecommerce performance creative.
+Meme Market is a Lumina Canvas skill for turning a product URL, product media, or a short selling brief into evidence-grounded, funny, conversion-focused short ads. It adapts the artifact-first, native-review, production, and editable-delivery discipline of [Cinema-Craft](https://github.com/XianlinLu/Cinema-Craft) to ecommerce performance creative.
 
 The workflow includes product-page research, recovery when webpage images cannot be inspected, white-model/product identity locking, three-direction creative development, comic short-form scripts, modular hook/CTA variants, native Lumina generation, editable Video Editor finishing, claim checks, and verified exports.
 
