@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meme Merchant"
+  short_description: "Turn product truth into funny, testable Lumina ads"
+  default_prompt: "Use $lumina-meme-merchant to turn this product URL into a funny, conversion-focused short ad with reusable variants."
