@@ -1,4 +1,4 @@
-# Meme Merchant
+# Meme Market
 
 [English](README.md)
 
