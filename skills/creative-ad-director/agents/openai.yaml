@@ -1,4 +1,4 @@
 interface:
   display_name: "Creative Ad Director"
   short_description: "Turn ideas into videos with native review checkpoints"
-  default_prompt: "Use $creative-ad-director to develop my idea into a complete script, then automatically produce the video through native Question reviews for characters, voices, the shot production table, clips, and final edit."
+  default_prompt: "Use $creative-ad-director to offer four distinct concepts around my idea, let me select one through a native Question, then write the complete script and automatically produce the video through native Question reviews for characters, voices, the shot production table, clips, and final edit."

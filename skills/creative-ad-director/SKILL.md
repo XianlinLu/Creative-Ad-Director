@@ -1,8 +1,8 @@
 ---
 name: creative-ad-director
-description: Produce humorous, story-driven marketing videos on Lumina Canvas from a user's idea, script, product URL, or references. Draft the script first, obtain native Question selections at creative checkpoints, prepare character turnarounds and voices, compile an executable shot production table, and automatically generate, repair, edit, and export the approved video.
+description: Produce humorous, story-driven marketing videos on Lumina Canvas from a user's idea, script, product URL, or references. Offer four distinct concepts first, obtain a native Question selection before writing the complete script, prepare character turnarounds and voices, compile an executable shot production table, and automatically generate, repair, edit, and export the approved video.
 metadata:
-  version: "2.4.0"
+  version: "2.4.1"
 ---
 
 # Creative Ad Director
@@ -15,7 +15,7 @@ Use for product launches/performance ads, TikTok/Douyin narrative ads, and socia
 
 Capture product/optional brand, idea, soft/hard-sell goal, audience, channel, language, format, resolution, and available product/character/scene/video/voice references. Research what is accessible and use reversible assumptions for optional gaps. Ask one critical missing fact at a time **through the native Question tool**.
 
-- **Story first:** if the user gives an idea or script, write/adapt that story directly. Do not insert a four-concept selection gate. Four concepts remain available only when the user requests alternatives or has no chosen direction; see [creative-strategy.md](references/creative-strategy.md).
+- **Four concepts first:** develop exactly four materially different creative interpretations of the user's idea, save/show them, and obtain a real native **G0 创意方向选择** answer before writing the complete script. Preserve the user's product, intent, constraints, and supplied facts across all four. Skip G0 only when the user explicitly requests direct execution of an existing definite script; merely supplying an idea or draft script, asking for automation, or delegating routine work does not qualify. Record the explicit bypass instruction and script revision. See [creative-strategy.md](references/creative-strategy.md).
 - **Duration follows the screenplay:** account for natural speech, actions, reactions, pauses, and CTA dwell. Give a provisional duration at script review, then refine from measured final speech before shot-table review. Do not force 15 seconds or round the whole film to 15/30/45/60. Explicit user duration is a constraint; substantial story/duration changes return to script review.
 - Default final-video format is **9:16, 1080p** unless specified. Character three-view sheets are **16:9**, independently of final-video format.
 - Prefer **Seedance 2.5**, with explicit **2.0** legacy mode. Discover actual capabilities before dispatch; follow [model-routing.md](references/model-routing.md). A policy preference is not proof of API support.
@@ -29,9 +29,11 @@ Save a checkpoint before any wait and resume from the returned event. After an a
 
 ## Ordered production flow
 
-### 1. Idea → complete script → G1 剧本确认
+### 1. Idea → four concepts → G0 → complete script → G1 剧本确认
 
-Read [product-research.md](references/product-research.md). Create/read back **Product Evidence Sheet**, **Creative Brief**, and **Scene Script vN** on canvas. The complete script includes scene IDs, setting/style, cast, visible actions, exact dialogue/VO, speaker/listener relationships, pauses, ending, product role, and provisional total rhythm/duration. Do useful drafting before any optional intake.
+Read [product-research.md](references/product-research.md) and [creative-strategy.md](references/creative-strategy.md). Create/read back **Product Evidence Sheet**, **Creative Brief**, and **Creative Board vN** with exactly four directions `C01–C04`. Differentiate their premise, character relationship/conflict, comic mechanism, product role, and ending; four slogans or hooks for the same story do not count. Recommend one, show all four, and call native **G0** with explicit concept choices. Do not pre-write a full screenplay or generate concept videos while this selection is pending. A revision choice revises the board through native controls and returns to G0.
+
+On the actual G0 answer, lock the chosen concept and board revision and immediately write/save/read back **Scene Script vN**, without asking the user to type “continue.” If and only if the user explicitly requests direct execution of an existing definite script, record that instruction, skip concept generation/G0, and preserve that script for G1. This exception does not waive subsequent review gates; an already approved exact revision need not be reviewed twice. The complete script includes scene IDs, setting/style, cast, visible actions, exact dialogue/VO, speaker/listener relationships, pauses, ending, product role, and provisional total rhythm/duration. Do useful drafting before any optional intake.
 
 Keep whole-scene exchanges and motivations; do not turn dialogue into disconnected slogans or comeback lines. Do not infer opening, paste/cream, dispensing, texture, exact color, or efficacy from static packshots or white models. Present the saved screenplay, then call native **G1 剧本确认**. Approval immediately starts character/prop preparation.
 

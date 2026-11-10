@@ -12,6 +12,7 @@ Default labels below are localized to the user's language. Every adjustment is o
 
 | Gate | Required visible artifact | Native options | On actual approval/selection |
 |---|---|---|---|
+| G0 创意方向选择 | Saved board with four distinct concepts C01–C04, constraints and recommendation | C01 / C02 / C03 / C04, with a native revision path | Lock the selected concept + board revision; immediately write the full script and present G1 |
 | G1 剧本确认 | Complete saved script, visual style, estimated rhythm/duration | 通过并生成角色 / 调整剧本 / 更换风格 | Lock script revision; generate character/prop references |
 | G2 角色与道具确认 | Ready 16:9 character front/side/back sheets plus applicable product/prop/scene references | 全部通过 / 调整指定角色或道具 / 重新查看 | Lock visual revisions; open role-specific voice preference gate |
 | G3 角色音色方案 | Named role, character image if visible, 2–3 described voice choices | 推荐方案 / 另一具体方案 / 自定义音色 | Save that role's choice; generate ~20s clean audition; continue outstanding roles |
@@ -20,6 +21,8 @@ Default labels below are localized to the user's language. Every adjustment is o
 | G6 分镜成片确认 | Actual current playable prepared shot(s), with correct dialogue and no unwanted model music | 通过当前镜头或明确列出的批次 / 调整指定镜头 / 重播 | Approve listed revisions only; continue remaining shots or post-production |
 | G7 后期制作方式 | Ordered approved shot inventory and proposed finishing scope | 剪辑拼接＋字幕 / 仅剪辑拼接 / 仅添加字幕 / 自定义 | Execute selected native editor operations; captions-only requires an existing assembled timeline |
 | G8 成片确认 | Full playable current edit with sound | 确认并导出下载 / 局部修改 / 再看一次 | Export exactly approved revision, verify output, deliver |
+
+G0 is required by default. Skip it only for an explicit user instruction to directly execute an existing definite script, recording the instruction and script revision. A supplied idea/draft, a recommendation, or a general automation request does not bypass G0. If four options exceed the real tool limit, use native sequential choices that expose all four concepts. A valid existing G0 answer for the current board is reused on resume.
 
 Do not ask empty gates: a silent film skips voice gates with a recorded reason; an off-screen narrator has voice gates but no fabricated visual identity. A user who already chose the exact post-production mode does not need G7 again. An existing approval may satisfy the same gate for the exact current revision, never a newly changed artifact. G3 preferences are not G4 audio approval; G5 production approval is not G6 finished-shot approval.
 
@@ -39,4 +42,4 @@ If the host's native Question waits synchronously, continue immediately after it
 
 ## Stable artifact IDs
 
-Use `SCRIPT-vN`, `CH01-vN`, `PM01-vN`, `PR01-vN`, `SC01-vN`, `VO01-audition-vN`, `VR01-reference-vN`, `DL01-line-vN`, `TABLE-vN`, `S01-vN`, `ED-vN`, and `EXP-vN`. Keep actual native handles separate from these semantic labels. Scope all IDs and approvals to the current canvas project.
+Use `BOARD-vN`, `C01–C04` scoped to their board revision, `SCRIPT-vN`, `CH01-vN`, `PM01-vN`, `PR01-vN`, `SC01-vN`, `VO01-audition-vN`, `VR01-reference-vN`, `DL01-line-vN`, `TABLE-vN`, `S01-vN`, `ED-vN`, and `EXP-vN`. Keep actual native handles separate from these semantic labels. Scope all IDs and approvals to the current canvas project.

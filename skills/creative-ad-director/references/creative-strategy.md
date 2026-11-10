@@ -14,9 +14,13 @@ Select one primary promise and one support point for a short ad. A list of six b
 
 ## Four-direction board
 
-Use this optional exploration only when the user requests alternative ideas or has not supplied a chosen direction. If the user gives an idea or script, develop it directly into a complete script for G1; do not force a concept-selection detour. When exploration is requested, create four materially different concepts `C01–C04` before developing the selected direction. Use at least four of the seven modes below unless the user restricts the mode; within a fixed mode, vary premise, character relationship, conflict, product integration, and ending. Four headlines or four openings for the same scene do not meet this requirement.
+Default to exactly four materially different concepts `C01–C04` around the user's idea before writing the complete screenplay. Preserve the user's intent, product facts and constraints; variation is in premise, character relationship/conflict, comic mechanism, product integration and ending. Use at least four of the seven modes below unless the user restricts the mode; within a fixed mode, vary those story dimensions. Four headlines or openings for the same scene do not count.
 
-For every concept show: audience tension, plot mode, hook, character relationship, setup → escalation → turn → ending, product role/evidence, soft-sell or hard-sell treatment, CTA, asset needs, and feasibility for the selected duration. Recommend one using evidence fit, conversational clarity, production complexity, and reuse potential. Use a native Question for selection unless already chosen or delegated, then write the full selected script and proceed to G1.
+For every concept show audience tension, plot mode, hook, character relationship, setup → escalation → turn → ending, product role/evidence, soft-sell or hard-sell treatment, CTA, asset needs, and feasibility. Recommend one using evidence fit, conversational clarity, production complexity, and reuse potential. Save/read back the complete board, show all four, and use native G0 with individually identifiable choices C01/C02/C03/C04. If the native tool limits option count, use sequential native selection controls that still allow choosing any of the four; never quietly omit a concept or replace selection with chat input.
+
+Only a real submitted choice locks the concept and immediately advances to the complete screenplay and G1 review. A recommendation is not a selection; automation requests do not authorize choosing on the user's behalf. Revising the board does not authorize writing a full screenplay for an unselected concept.
+
+Skip the four-concept step only when the user explicitly asks to execute an existing definite script directly, without alternative concepts. Record the instruction and script revision; merely supplying an idea, sample, draft, or script is not itself that instruction. Preserve the supplied script and proceed to G1, respecting an existing approval only for that exact revision. Resuming a project with a valid G0 selection continues from it instead of asking again.
 
 ## Soft-sell, hard-sell, and trending structure
 

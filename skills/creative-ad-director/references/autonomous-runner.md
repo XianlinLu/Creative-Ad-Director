@@ -8,7 +8,7 @@ At activation, reconcile the current canvas, artifacts, existing questions, acce
 
 Persist this logical state (map it to actual host storage, not an invented API):
 
-`project, stage, artifact revisions, gate/question state, per-role voice choices, per-shot readiness/approval, accepted job IDs, actual output handles, audio validation, dependency graph, retry counts, next_action, blocker`
+`project, stage, concept board revision, selected concept/G0 answer or explicit script-bypass instruction, artifact revisions, gate/question state, per-role voice choices, per-shot readiness/approval, accepted job IDs, actual output handles, audio validation, dependency graph, retry counts, next_action, blocker`
 
 Then repeatedly:
 
@@ -47,4 +47,4 @@ Limit automatic corrective generation to two additional attempts per failure sig
 
 ## Revision invalidation
 
-Script changes invalidate affected lines, shot rows, prompts, clips, and edits; unchanged character identity can be reused. Appearance changes invalidate dependent visual shots, not unrelated voices. Voice changes invalidate that role's derived reference excerpts, final lines, dependent audio/video, and affected edit spans, not other roles. A changed predecessor ending invalidates only dependent continuation units. Return to the earliest affected review gate and then resume forward without restarting the project.
+A changed concept selection or materially changed selected concept invalidates the dependent script and downstream work; revising only unselected options leaves the selected chain valid. Resume from the earliest affected gate. Script changes invalidate affected lines, shot rows, prompts, clips, and edits; unchanged character identity can be reused. Appearance changes invalidate dependent visual shots, not unrelated voices. Voice changes invalidate that role's derived reference excerpts, final lines, dependent audio/video, and affected edit spans, not other roles. A changed predecessor ending invalidates only dependent continuation units. Return to the earliest affected review gate and then resume forward without restarting the project.
