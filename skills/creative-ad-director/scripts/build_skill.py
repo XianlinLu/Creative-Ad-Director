@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 def load_preflight(script: Path):
-    spec = importlib.util.spec_from_file_location("meme_merchant_preflight", script)
+    spec = importlib.util.spec_from_file_location("creative_ad_director_preflight", script)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot load {script}")
     module = importlib.util.module_from_spec(spec)
@@ -27,6 +27,7 @@ def build(skill_dir: Path, output: Path) -> None:
 
     included = [skill_dir / "SKILL.md", skill_dir / "agents" / "openai.yaml"]
     included.extend(sorted((skill_dir / "references").glob("*.md")))
+    included.append(skill_dir / "scripts" / "validate_r2v_audio.py")
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:

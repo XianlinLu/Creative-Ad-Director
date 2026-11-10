@@ -37,7 +37,7 @@ Do not create dangerous demonstrations, unsafe product use, fake emergency UI, m
 
 ## Pre-production gate
 
-Before Ad Production Review confirm:
+Before G5 Shot Production Master Table Review confirm:
 
 - product model/variant and visual references are real and current;
 - every objective line and visual implication has a claim-map status;
@@ -48,9 +48,28 @@ Before Ad Production Review confirm:
 
 An unresolved material claim or rights problem blocks only dependent shots; keep independent draft work moving.
 
+## Shot QC Log and bounded repair
+
+Inspect every shot interval in the actual generated media, with sound. Record:
+
+| Shot / global interval | People | Product | Space | Sound | Text | Evidence / defect timecode | Smallest repair | Dependent outputs |
+|---|---|---|---|---|---|---|---|---|
+
+Each dimension receives `pass`, `fail`, or `not inspected` with a reason:
+
+- **People:** character identity, wardrobe, hands/contact, speaker/listener, eyeline, reaction, and motivated turn-taking.
+- **Product:** SKU, geometry, finish/color, labels, scale, evidenced use state, and no invented opening, cream/paste, dispensing, or efficacy.
+- **Space:** blocking, screen direction, prop position, light, camera continuity, and native extension boundary.
+- **Sound:** bound voice identity, correct speaker, complete natural dialogue, pauses, lip sync, effects, and music balance.
+- **Text:** wording, captions aligned to actual speech, product/offer accuracy, readable dwell, safe area, and no unwanted generated lettering.
+
+Fix an editable caption or audio fault on its track when sufficient. Regenerate a failed shot only if the actual tool can isolate it. If it cannot, use the smallest supported generation unit, preserve the old version, and replace only the needed range where continuity permits. Passed unrelated spans/assets remain valid. Recheck both edges of a repair and any extension whose source ending changed. Do not restart the entire ad because one interval failed. Follow the bounded retry rule in the production workflow.
+
+Never label unseen footage or unheard audio as passed. If playback or audio inspection is unavailable, state the missing QC capability and leave those entries not inspected.
+
 ## Final editorial QC
 
-Watch the complete current revision with sound and inspect it muted at phone size.
+Watch the complete current revision with sound and inspect it muted at phone size. Prepared shot outputs require native G6 review; the complete edit requires native G8 review. Follow `canvas-artifacts.md` for all choices and revision instructions.
 
 ### Truth and product
 
@@ -68,15 +87,15 @@ Watch the complete current revision with sound and inspect it muted at phone siz
 
 ### Picture, text, and sound
 
-- Correct duration, ratio, crop, platform safe areas, and no black gaps/duplicate spans.
+- Correct duration, ratio, resolution, crop, platform safe areas, and no black gaps/duplicate spans.
 - Text is exact, readable, sufficiently long, correctly layered, and not unintentionally generated into the scene.
-- Dialogue is complete and intelligible; lip sync is acceptable where needed.
+- Dialogue is complete and intelligible; each speaker uses the approved voice, no audition sample text is substituted for final lines, no doubled dialogue is present, and lip sync is acceptable where needed.
 - Effects and ambience support the action; music is authorized, balanced, and does not cover speech.
 - Captions match final speech and cuts; disclosures remain visible and legible.
 
 ### Delivery
 
-- Final approval matches the exact editor revision exported.
+- G8 native Question approval matches the exact editor revision exported.
 - Each file opens, plays, and has expected picture/audio/caption state.
 - Variant filenames and manifest map to the correct hook/body/payoff/CTA modules.
 - Download access works; editable draft and supporting artifacts are returned when available.

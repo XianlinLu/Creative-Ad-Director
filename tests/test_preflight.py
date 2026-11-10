@@ -4,12 +4,12 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skills" / "lumina-meme-merchant"
+SKILL_DIR = ROOT / "skills" / "creative-ad-director"
 SCRIPT = SKILL_DIR / "scripts" / "preflight.py"
 
 
 def load_module():
-    spec = importlib.util.spec_from_file_location("meme_merchant_preflight", SCRIPT)
+    spec = importlib.util.spec_from_file_location("creative_ad_director_preflight", SCRIPT)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

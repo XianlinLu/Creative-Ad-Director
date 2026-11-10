@@ -1,39 +1,62 @@
-# Meme Market
+# Creative Ad Director
 
 [简体中文](README.zh-CN.md)
 
-Meme Market is a Lumina Canvas skill for turning a product URL, product media, or a short selling brief into evidence-grounded, funny, conversion-focused short ads. It adapts the artifact-first, native-review, production, and editable-delivery discipline of [Cinema-Craft](https://github.com/XianlinLu/Cinema-Craft) to ecommerce performance creative.
+Version **2.4.1** is an idea-to-video workflow for Lumina Canvas. It first offers four distinct concepts around the user's idea, obtains a **native Question selection**, then writes the complete screenplay and runs production automatically between review checkpoints. It does not ask users to type “continue” after routine tool operations.
 
-The workflow includes product-page research, recovery when webpage images cannot be inspected, white-model/product identity locking, three-direction creative development, comic short-form scripts, modular hook/CTA variants, native Lumina generation, editable Video Editor finishing, claim checks, and verified exports.
+## Production sequence
 
-## Install in Lumina
+1. **Four distinct concepts → native selection → complete screenplay → native script review.** Keep the user's intent and product facts while varying the story. Skip concept selection only when the user explicitly asks to directly execute an existing definite script. Derive duration from natural dialogue, action and story rhythm, honoring explicit duration constraints.
+2. **Character/prop generation → native visual review.** Every visible character gets a landscape **16:9 front/side/back turnaround**, independent of final-video ratio.
+3. **Native voice preference per speaking role → real audition.** Offer concrete voice choices, then generate approximately **20 seconds** of clean speech for each character/narrator.
+4. **Native audition review → exact final dialogue.** Lock approved voices, synthesize the actual screenplay lines, and measure durations.
+5. **Shot Production Master Table → native table review.** Include source-row coverage, boards, measured speech, timing, actions, camera, dialogue, actual input mappings, dependencies, job states, QC and approvals.
+6. **Automatic shot generation and repair → native shot review.** Use each shot's actual character references and approved voice-derived audio. Wait for real predecessor video in same-scene continuations; reset the video dependency at scene changes.
+7. **Native finishing choice → real Video Editor work → native final review.** Assemble approved clips, preserve voices/effects, and apply chosen captions/music.
+8. **Confirm/export → verified playable, downloadable film.** Deliver the actual output and editable project when available.
 
-Download `dist/lumina-meme-merchant-v0.1.0.zip`, extract it, and import `SKILL.md`, `agents/`, and `references/` into a new Lumina skill. The ZIP intentionally excludes repository-only scripts and tests.
+All choices and revision details use the host's real Question interface, including native custom fields where supported. Replaying existing media does not regenerate it. Each approval is bound to exact visible/playable revisions. User-answer waits remain necessary; there are no approval-by-timeout shortcuts.
 
-Example prompt:
+## Prevent the reported r2v audio errors
 
-> Use this product URL to make a 15-second 9:16 funny ecommerce ad. Keep the product and claims accurate, create three hook options, and deliver one master plus two hook variants.
+Observed errors for `dreamina-seedance-2-5` in r2v require **each attached audio ≥1.8s** and **combined attached audio ≤30.2s per request**. Prepare with a practical **2.0s minimum / 30.0s total margin**, and verify actual prepared-file durations.
 
-## Repository layout
+A 20-second audition is for user review; it is not automatically the video input. Two full auditions would total 40 seconds. Derive short clean spoken reference excerpts from approved voices, bind only the current unit's required roles, and count **all** outgoing audio entries, including final dialogue when attached. Do not deduplicate only the accounting while leaving duplicate files in the payload.
 
-```text
-skills/lumina-meme-merchant/
-├── SKILL.md
-├── agents/openai.yaml
-├── references/
-└── scripts/
-tests/
-dist/
-```
+Use the packaged `scripts/validate_r2v_audio.py` when Python is available, or the same checks with native metadata when it is not. The helper checks measured metadata and role coverage; it does not measure media, prove audio quality, or submit a request. See [audio preflight](skills/creative-ad-director/references/r2v-audio.md). Invalid-parameter requests must be corrected before retry, never replayed unchanged.
+
+## Scope and runtime requirements
+
+Use for product launches/performance ads, TikTok/Douyin narrative ads, and social marketing creative. Preserve verified product states: still images do not establish opening, dispensing, paste/cream, exact materials/colors, or efficacy. White models help with geometry only.
+
+Defaults: final film **9:16, 1080p**, Seedance **2.5** preference; **2.0** legacy mode is explicit. Duration follows the story. Verify actual model/mode support and per-unit/extension constraints. Seven comic plot modes support the four-concept exploration.
+
+Full execution requires actual Canvas/Question tools, image/audio/video generation, duration measurement, polling/resume, inspection, Video Editor and export capabilities. A host in Manual mode may require switching to its supported automatic execution mode. The Skill cannot override the host setting, create missing tools, or supply an absent answer callback. Missing capability is a concrete blocker, not a reason to fake native cards or claim completed video.
+
+## Install
+
+Download [creative-ad-director-v2.4.1.zip](dist/creative-ad-director-v2.4.1.zip) and replace the previous imported Skill. Keep `SKILL.md`, `agents/`, `references/`, and the runtime audio guard under `scripts/` together. Repository-only build/preflight scripts and tests are excluded. In hosts without script execution, the Markdown reference specifies the same preflight checks.
+
+## Instructions for use (under 1,000 characters)
+
+Turn your idea into a marketing video with Creative Ad Director.
+
+1. Share an idea, script, product URL, or references, plus any constraints.
+2. Choose from four distinct concepts through Lumina's native Question options. The agent then writes the full script for review. Skip concepts only by explicitly requesting direct execution of an existing script.
+3. Approve 16:9 character turnarounds, choose each speaking role's voice, and review real auditions of about 20 seconds.
+4. Approve the shot production table, generated clips, and final edit through native options.
+5. Confirm export to receive the verified video.
+
+The agent advances after each selection; revisions stay inside native cards. Duration follows story rhythm unless specified. Shot-specific voice excerpts are checked against actual audio limits. Native tools and automatic host execution must be available. Product claims and actions stay within supplied evidence.
 
 ## Validate and build
 
 ```bash
-python3 /path/to/skill-creator/scripts/quick_validate.py skills/lumina-meme-merchant
-python3 skills/lumina-meme-merchant/scripts/preflight.py
+python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-director
+python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
-python3 skills/lumina-meme-merchant/scripts/build_skill.py \
-  --output dist/lumina-meme-merchant-v0.1.0.zip
+python3 skills/creative-ad-director/scripts/build_skill.py \
+  --output dist/creative-ad-director-v2.4.1.zip
 ```
 
-Static checks validate packaging and instruction integrity. Actual URL access, paid generation, native Question cards, Video Editor behavior, policy review, and end-to-end exports still require testing in the active Lumina environment.
+The regression tests cover both reported duration failures, inclusive limits, combined voice/dialogue inputs, duplicate attachments, missing speakers, invalid/unverified durations, and source approval. Static validation is not an end-to-end Lumina run; native cards, actual conditioning, paid video jobs, resume behavior and exports still require live verification.

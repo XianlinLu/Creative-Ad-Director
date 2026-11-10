@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static validation for the Lumina Meme Merchant import tree."""
+"""Static validation for the Lumina Creative Ad Director import tree."""
 
 from __future__ import annotations
 
@@ -15,6 +15,11 @@ REQUIRED_REFERENCES = {
     "creative-strategy.md",
     "production-workflow.md",
     "compliance-and-qc.md",
+    "assets-and-voices.md",
+    "model-routing.md",
+    "autonomous-runner.md",
+    "r2v-audio.md",
+    "shot-prompt-compiler.md",
 }
 
 
@@ -28,7 +33,7 @@ def validate(skill_dir: Path) -> list[str]:
     agent = skill_dir / "agents" / "openai.yaml"
     refs = skill_dir / "references"
 
-    for required in (skill, agent, refs):
+    for required in (skill, agent, refs, skill_dir / "scripts" / "validate_r2v_audio.py"):
         if not required.exists():
             errors.append(f"missing required path: {required.relative_to(skill_dir)}")
 
@@ -38,7 +43,7 @@ def validate(skill_dir: Path) -> list[str]:
     text = skill.read_text(encoding="utf-8")
     if "TODO" in text or "[TODO" in text:
         errors.append("SKILL.md contains unfinished TODO text")
-    if not re.search(r"(?m)^name:\s*lumina-meme-merchant\s*$", text):
+    if not re.search(r"(?m)^name:\s*creative-ad-director\s*$", text):
         errors.append("SKILL.md has the wrong or missing name")
     if not re.search(r"(?m)^description:\s*\S", text):
         errors.append("SKILL.md is missing a non-empty description")
