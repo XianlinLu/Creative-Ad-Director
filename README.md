@@ -38,7 +38,7 @@ These are requested workflow presets, not independently verified provider specif
 
 ## Install
 
-Download [creative-ad-director-v2.3.0.zip](dist/creative-ad-director-v2.3.0.zip), extract it, and import `SKILL.md`, `agents/`, and `references/` into Lumina. The ZIP excludes repository-only scripts and tests. This replaces the previous `lumina-meme-merchant` skill identity; remove/disable the old imported copy when replacing it to avoid duplicate discovery.
+Download [creative-ad-director-v2.3.0.zip](dist/creative-ad-director-v2.3.0.zip), extract it, and import `SKILL.md`, `agents/`, and `references/` into Lumina. The ZIP excludes repository-only scripts and tests. When updating an existing installation, replace or disable the previous imported copy to avoid duplicate discovery.
 
 Example:
 

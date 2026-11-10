@@ -48,7 +48,7 @@
 
 ## 导入与使用
 
-下载 [creative-ad-director-v2.3.0.zip](dist/creative-ad-director-v2.3.0.zip)，解压后导入 `SKILL.md`、`agents/`、`references/`。ZIP 不含仓库维护脚本和测试。此版名称从 `lumina-meme-merchant` 改为 `creative-ad-director`；替换旧版时禁用或移除旧导入副本，避免重复发现。
+下载 [creative-ad-director-v2.3.0.zip](dist/creative-ad-director-v2.3.0.zip)，解压后导入 `SKILL.md`、`agents/`、`references/`。ZIP 不含仓库维护脚本和测试。更新已有安装时，请替换或禁用旧导入副本，避免重复发现。
 
 示例：
 
