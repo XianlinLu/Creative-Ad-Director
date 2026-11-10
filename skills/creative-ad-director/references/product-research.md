@@ -60,6 +60,12 @@ Classify each visible property:
 
 Verified dimensions alone may support a dimensioned blockout, not a brand-faithful product. A generic blockout can guide composition, shadow, hand position, and camera distance, but must not appear as the final product in a truthful ad. Do not add logos, labels, certification marks, displays, ports, buttons, ingredients, or claims to make the model look finished.
 
+## Product use-state evidence
+
+For each planned product action record source/asset ID, inspected timecode or image region, visible state, permitted depiction, and unknown transition. A closed packshot supports a closed-package shot, not a lid-opening mechanism, cream/paste consistency, liquid flow, absorption, or efficacy. Do not infer exact texture or color from neutral white-model renders. Requested materials/colors may guide an explicitly proposed finish but are not verified product appearance until supported.
+
+When the desired demonstration lacks evidence, keep the product in its observed state, use another supported feature, or ask one targeted question for the missing reference. Never use a generated visual as independent proof of the behavior it invented.
+
 ## Review and competitor research
 
 Use reviews to identify language, objections, and scenarios, not to fabricate proof. Preserve the meaning of a quoted review, avoid composite testimonials presented as one person, and record whether the reviewer or purchase was verified when the platform exposes it. Do not invent a reviewer avatar, name, rating, or before/after result.

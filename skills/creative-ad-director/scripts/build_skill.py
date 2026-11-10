@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 def load_preflight(script: Path):
-    spec = importlib.util.spec_from_file_location("meme_merchant_preflight", script)
+    spec = importlib.util.spec_from_file_location("creative_ad_director_preflight", script)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot load {script}")
     module = importlib.util.module_from_spec(spec)

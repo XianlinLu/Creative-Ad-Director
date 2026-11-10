@@ -48,6 +48,25 @@ Before Ad Production Review confirm:
 
 An unresolved material claim or rights problem blocks only dependent shots; keep independent draft work moving.
 
+## Shot QC Log and bounded repair
+
+Inspect every shot interval in the actual generated media, with sound. Record:
+
+| Shot / global interval | People | Product | Space | Sound | Text | Evidence / defect timecode | Smallest repair | Dependent outputs |
+|---|---|---|---|---|---|---|---|---|
+
+Each dimension receives `pass`, `fail`, or `not inspected` with a reason:
+
+- **People:** character identity, wardrobe, hands/contact, speaker/listener, eyeline, reaction, and motivated turn-taking.
+- **Product:** SKU, geometry, finish/color, labels, scale, evidenced use state, and no invented opening, cream/paste, dispensing, or efficacy.
+- **Space:** blocking, screen direction, prop position, light, camera continuity, and native extension boundary.
+- **Sound:** bound voice identity, correct speaker, complete natural dialogue, pauses, lip sync, effects, and music balance.
+- **Text:** wording, captions aligned to actual speech, product/offer accuracy, readable dwell, safe area, and no unwanted generated lettering.
+
+Fix an editable caption or audio fault on its track when sufficient. Regenerate a failed shot only if the actual tool can isolate it. If it cannot, use the smallest supported generation unit, preserve the old version, and replace only the needed range where continuity permits. Passed unrelated spans/assets remain valid. Recheck both edges of a repair and any extension whose source ending changed. Do not restart the entire ad because one interval failed. Follow the bounded retry rule in the production workflow.
+
+Never label unseen footage or unheard audio as passed. If playback or audio inspection is unavailable, state the missing QC capability and leave those entries not inspected.
+
 ## Final editorial QC
 
 Watch the complete current revision with sound and inspect it muted at phone size.
@@ -68,7 +87,7 @@ Watch the complete current revision with sound and inspect it muted at phone siz
 
 ### Picture, text, and sound
 
-- Correct duration, ratio, crop, platform safe areas, and no black gaps/duplicate spans.
+- Correct duration, ratio, resolution, crop, platform safe areas, and no black gaps/duplicate spans.
 - Text is exact, readable, sufficiently long, correctly layered, and not unintentionally generated into the scene.
 - Dialogue is complete and intelligible; lip sync is acceptable where needed.
 - Effects and ambience support the action; music is authorized, balanced, and does not cover speech.

@@ -7,8 +7,8 @@ Use this reference on activation, resume, before any Question card, and after a 
 Before asking a creative question, save a useful editable result on the canvas. At minimum, an early run must produce:
 
 1. **Product Evidence Sheet vN** with sources, verified facts, unknowns, and claim risks.
-2. **Merchant Brief vN** with objective, audience, channel, duration/ratio, offer, CTA, constraints, and assumptions.
-3. **Creative Board vN** with three distinct directions and the first three provisional shots of the recommendation.
+2. **Creative Brief vN** with objective, audience, channel, duration/ratio, offer, CTA, constraints, and assumptions.
+3. **Creative Board vN** with four distinct directions and the first three provisional shots of the recommendation.
 
 Read back each saved artifact. A blank node, chat-only plan, card body, task acknowledgment, or future-tense update is not an artifact. If canvas writing fails after bounded reconciliation, show a clearly labeled unsaved fallback in chat and retain the write blocker; it cannot receive canvas artifact approval.
 
@@ -18,10 +18,12 @@ On resume, reuse the most advanced valid artifact and stable IDs. Do not rebuild
 
 Use human-readable IDs that survive revisions:
 
-- concept: `C01`, `C02`, `C03`
+- concept: `C01`, `C02`, `C03`, `C04`
 - product master: `PM01`
 - white model: `WM01`
-- actor/hand model: `AM01`
+- character/hand model: `CH01`
+- independent voice: `VO01`
+- scene / prop: `SC01`, `PR01`
 - shot: `S01`, `S02`...
 - hook: `H-A`, `H-B`, `H-C`
 - payoff: `P-A`, `P-B`
@@ -31,6 +33,8 @@ Use human-readable IDs that survive revisions:
 Store current revision, source revisions, approval state, actual native handles, accepted job IDs, status, and next eligible action. Node creation, job acceptance, output readiness, technical QC, creative approval, editor preview, and final export are distinct states.
 
 ## Native decision gates
+
+Resolve only decisions still outstanding for the current scope/revision. Reuse explicit authorization already given. Ask one question at a time, including when critical brief information is missing; never bundle several missing fields into one card. In environments without canvas tools, label chat artifacts as drafts and do not claim canvas persistence or native review.
 
 Cards contain a concise artifact locator and decision controls, not the artifact body.
 
@@ -44,7 +48,7 @@ Show the actual evidence sheet, brief, creative board, and first-three-shot draf
 
 ### Product and Visual Lock Review
 
-Show every applicable actual product master, white model, cast/hand model, scene reference, and key prop.
+Show every applicable actual product master, white model, character/hand model, scene reference, key prop, and playable independent voice audition. Include the Asset Register with readiness, revisions, and approval states.
 
 - Approve shown assets
 - Revise a named asset
@@ -52,7 +56,7 @@ Show every applicable actual product master, white model, cast/hand model, scene
 
 ### Ad Production Review
 
-Save/read back the full timed script, claim map, variant manifest, and complete shot table; show all boards.
+Save/read back the full scene dialogue, continuous timed script, claim map, requested variant manifest, complete shot table, and first-appearance Reference Binding Manifest; show all boards.
 
 - Approve and generate
 - Revise a shot, line, or claim

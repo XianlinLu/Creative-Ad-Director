@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static validation for the Lumina Meme Merchant import tree."""
+"""Static validation for the Lumina Creative Ad Director import tree."""
 
 from __future__ import annotations
 
@@ -15,6 +15,8 @@ REQUIRED_REFERENCES = {
     "creative-strategy.md",
     "production-workflow.md",
     "compliance-and-qc.md",
+    "assets-and-voices.md",
+    "model-routing.md",
 }
 
 
@@ -38,7 +40,7 @@ def validate(skill_dir: Path) -> list[str]:
     text = skill.read_text(encoding="utf-8")
     if "TODO" in text or "[TODO" in text:
         errors.append("SKILL.md contains unfinished TODO text")
-    if not re.search(r"(?m)^name:\s*lumina-meme-merchant\s*$", text):
+    if not re.search(r"(?m)^name:\s*creative-ad-director\s*$", text):
         errors.append("SKILL.md has the wrong or missing name")
     if not re.search(r"(?m)^description:\s*\S", text):
         errors.append("SKILL.md is missing a non-empty description")

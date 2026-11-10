@@ -1,0 +1,4 @@
+interface:
+  display_name: "Creative Ad Director"
+  short_description: "Direct funny product stories from concept to final ad"
+  default_prompt: "Use $creative-ad-director to develop four distinct concepts for this product, then turn the selected direction into a humorous ad with continuous timestamps, verified product states, and consistent characters and voices."
