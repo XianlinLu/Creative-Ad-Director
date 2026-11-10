@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-**v2.4.1：围绕用户想法先给四个差异明显的创意，经原生 Question 选定后写完整剧本；用户只在关键节点点选，Agent 自动完成节点之间的制作。** 不再要求用户在聊天输入框反复输入“继续”。
+**v2.4.2：围绕用户想法先给四个差异明显的创意，经原生 Question 选定后写完整剧本；用户只在关键节点点选，Agent 自动完成节点之间的制作。** 不再要求用户在聊天输入框反复输入“继续”。
 
 ## 正确流程
 
@@ -28,7 +28,7 @@
 
 约 20 秒试听用于用户判断声线；分镜输入则从已批准试听中截取自然、干净的短语音参考。不能把两个 20 秒试听直接一起塞进请求，也不能把项目所有角色音频无差别绑定到每个镜头。若同时绑定声线参考和正式台词，两类音频都计入总量。旁白若在剪辑轨道处理，须在总表中明确其路线。
 
-已加入可选运行脚本 `scripts/validate_r2v_audio.py`，检查实际测量元数据、逐条/合计时长、角色覆盖、重复附件及源声线批准状态。脚本不测量媒体、不验证音质、不调用生成服务；无 Python 的宿主按 [音频预检规则](skills/creative-ad-director/references/r2v-audio.md) 使用原生元数据完成相同检查。400 参数错误必须先改素材/参数再重试，禁止原样反复提交。
+Agent 按 [音频预检规则](skills/creative-ad-director/references/r2v-audio.md)，使用真实原生媒体元数据检查逐条/合计时长、角色覆盖、重复附件及源声线批准状态，无需 Python、终端或用户运行命令。`scripts/validate_r2v_audio.py` 仅保留在 GitHub 源码中用于开发回归验证，不进入 Lumina 安装包。400 参数错误必须先改素材/参数再重试，禁止原样反复提交。
 
 ## 自动推进与能力边界
 
@@ -40,14 +40,14 @@ Agent 保存当前阶段、资产版本、Question ID、任务 ID、输入绑定
 
 ## 导入与验证
 
-下载 [creative-ad-director-v2.4.1.zip](dist/creative-ad-director-v2.4.1.zip)，替换旧导入版本，保留 `SKILL.md`、`agents/`、`references/` 和 `scripts/` 下的音频检查辅助脚本。包内不包含仓库维护脚本与测试；不支持脚本执行的宿主按 Markdown 规则执行预检。
+下载 [creative-ad-director-v2.4.2.zip](dist/creative-ad-director-v2.4.2.zip)，替换旧导入版本，导入 `SKILL.md`、`agents/`、`references/`。安装包仅包含受支持的 `.md` 和 `.yaml` 文件；全部 Python 脚本与测试只保留在仓库。请勿把仓库源码目录直接当作 Skill 安装包上传。打包器会检查文件扩展名白名单、小写扩展名，以及最多 64 字符的英文字母/数字/下划线/连字符名称。
 
 ```bash
 python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-director
 python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
 python3 skills/creative-ad-director/scripts/build_skill.py \
-  --output dist/creative-ad-director-v2.4.1.zip
+  --output dist/creative-ad-director-v2.4.2.zip
 ```
 
 测试覆盖两种已报告的音频时长失败、边界值、重复音频、声线参考与正式台词总量、缺失角色、无效/未测量时长和未批准声线。静态测试不等于 Lumina 端到端运行；原生卡片、实际声线绑定、付费生成、恢复执行和导出仍需真实环境验证。

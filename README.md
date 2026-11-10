@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-Version **2.4.1** is an idea-to-video workflow for Lumina Canvas. It first offers four distinct concepts around the user's idea, obtains a **native Question selection**, then writes the complete screenplay and runs production automatically between review checkpoints. It does not ask users to type “continue” after routine tool operations.
+Version **2.4.2** is an idea-to-video workflow for Lumina Canvas. It first offers four distinct concepts around the user's idea, obtains a **native Question selection**, then writes the complete screenplay and runs production automatically between review checkpoints. It does not ask users to type “continue” after routine tool operations.
 
 ## Production sequence
 
@@ -23,7 +23,7 @@ Observed errors for `dreamina-seedance-2-5` in r2v require **each attached audio
 
 A 20-second audition is for user review; it is not automatically the video input. Two full auditions would total 40 seconds. Derive short clean spoken reference excerpts from approved voices, bind only the current unit's required roles, and count **all** outgoing audio entries, including final dialogue when attached. Do not deduplicate only the accounting while leaving duplicate files in the payload.
 
-Use the packaged `scripts/validate_r2v_audio.py` when Python is available, or the same checks with native metadata when it is not. The helper checks measured metadata and role coverage; it does not measure media, prove audio quality, or submit a request. See [audio preflight](skills/creative-ad-director/references/r2v-audio.md). Invalid-parameter requests must be corrected before retry, never replayed unchanged.
+The Agent performs the checks from native media metadata using the imported Markdown rules; no Python runtime or user-run command is required. The repository keeps `scripts/validate_r2v_audio.py` for developer-side regression checks only; it is excluded from the import ZIP. See [audio preflight](skills/creative-ad-director/references/r2v-audio.md). Invalid-parameter requests must be corrected before retry, never replayed unchanged.
 
 ## Scope and runtime requirements
 
@@ -35,7 +35,7 @@ Full execution requires actual Canvas/Question tools, image/audio/video generati
 
 ## Install
 
-Download [creative-ad-director-v2.4.1.zip](dist/creative-ad-director-v2.4.1.zip) and replace the previous imported Skill. Keep `SKILL.md`, `agents/`, `references/`, and the runtime audio guard under `scripts/` together. Repository-only build/preflight scripts and tests are excluded. In hosts without script execution, the Markdown reference specifies the same preflight checks.
+Download [creative-ad-director-v2.4.2.zip](dist/creative-ad-director-v2.4.2.zip) and replace the previous imported Skill. Import `SKILL.md`, `agents/`, and `references/`. The ZIP contains only supported `.md` and `.yaml` files; all Python scripts and tests stay in the repository. Do not upload the repository source folder as the Skill package. The builder validates supported extensions (`.md`, `.txt`, `.json`, `.yaml`, `.yml`), lowercase extensions, and ASCII names of at most 64 characters before writing the ZIP.
 
 ## Instructions for use (under 1,000 characters)
 
@@ -56,7 +56,7 @@ python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-dire
 python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
 python3 skills/creative-ad-director/scripts/build_skill.py \
-  --output dist/creative-ad-director-v2.4.1.zip
+  --output dist/creative-ad-director-v2.4.2.zip
 ```
 
 The regression tests cover both reported duration failures, inclusive limits, combined voice/dialogue inputs, duplicate attachments, missing speakers, invalid/unverified durations, and source approval. Static validation is not an end-to-end Lumina run; native cards, actual conditioning, paid video jobs, resume behavior and exports still require live verification.
