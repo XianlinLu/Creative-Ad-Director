@@ -42,7 +42,7 @@ Text access, HTML access, a direct image URL, a thumbnail, and actual pixel insp
 2. Use an actual supported import, visible permitted download, connected browser handoff, or user upload to bring the product image/video into Lumina Canvas.
 3. Open and inspect the real imported asset. Record its handle, source, view, variant, and visible details. Only then may it drive product-lock assets or image-conditioned generation.
 4. If hotlinking, authentication, robots rules, or the native environment prevents import, try an official manual/media kit or another authorized source. Do not bypass access controls.
-5. If no inspectable image is available, continue with a text-only evidence sheet and an explicitly provisional storyboard. Ask once for a product upload only when accurate appearance is necessary for production.
+5. If no inspectable image is available, continue with a text-only evidence sheet and an explicitly provisional storyboard. Use one native Question requesting an inspectable product asset only when accurate appearance is necessary for production; use the host's supported upload route, never imply a text-only card accepts attachments.
 
 Never say “the product is red,” “the logo sits on the lid,” or “the demo shows X” because a filename, alt attribute, or snippet suggests it. Never call a generated image a scraped, downloaded, or inspected product photo.
 
@@ -64,7 +64,7 @@ Verified dimensions alone may support a dimensioned blockout, not a brand-faithf
 
 For each planned product action record source/asset ID, inspected timecode or image region, visible state, permitted depiction, and unknown transition. A closed packshot supports a closed-package shot, not a lid-opening mechanism, cream/paste consistency, liquid flow, absorption, or efficacy. Do not infer exact texture or color from neutral white-model renders. Requested materials/colors may guide an explicitly proposed finish but are not verified product appearance until supported.
 
-When the desired demonstration lacks evidence, keep the product in its observed state, use another supported feature, or ask one targeted question for the missing reference. Never use a generated visual as independent proof of the behavior it invented.
+When the desired demonstration lacks evidence, keep the product in its observed state, use another supported feature, or ask one targeted native Question for the missing reference. Never use a generated visual as independent proof of the behavior it invented.
 
 ## Review and competitor research
 

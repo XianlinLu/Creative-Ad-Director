@@ -17,6 +17,9 @@ REQUIRED_REFERENCES = {
     "compliance-and-qc.md",
     "assets-and-voices.md",
     "model-routing.md",
+    "autonomous-runner.md",
+    "r2v-audio.md",
+    "shot-prompt-compiler.md",
 }
 
 
@@ -30,7 +33,7 @@ def validate(skill_dir: Path) -> list[str]:
     agent = skill_dir / "agents" / "openai.yaml"
     refs = skill_dir / "references"
 
-    for required in (skill, agent, refs):
+    for required in (skill, agent, refs, skill_dir / "scripts" / "validate_r2v_audio.py"):
         if not required.exists():
             errors.append(f"missing required path: {required.relative_to(skill_dir)}")
 

@@ -1,0 +1,37 @@
+# Compile the approved table into scene-specific prompts
+
+Use the supplied references for workflow structure only. Never import their illustrative plots, characters, locations, dialogue, or visual style into a user's film. The approved current screenplay and production table are the content authority.
+
+## Reconcile source rows before writing
+
+Read the scene and adjacent rows; retain source row/line IDs, exact speech, shot size, camera motion, character action, setting, props, and duration. If a source item is intentionally absent, mark none; if essential content is missing, resolve it from the approved script or a native Question. Do not invent a new plot while compiling prompts.
+
+Consider merging a sub-4-second editorial shot with adjacent compatible action only when scene/time/place, characters, wardrobe, lighting, and camera intent remain coherent and all source content survives. Never merge across a new scene or erase an independent reveal, reaction hold, or punchline just to meet a tool's minimum duration. Record source-row coverage for every merged unit. An editorial shot can remain short inside a longer supported generation unit.
+
+## Timing
+
+Measure exact final speech first. Allocate action, transitions, breath, and reaction time. Merge compatible rows before rounding. For a provider expecting integer seconds, use half-up rounding for provisional timings, then reconcile to a feasible sequence: each local request starts at 0, each interval starts at the previous end, no interval has zero/negative duration, and the final end equals the unit duration. Never round into less room than actual dialogue/action requires; increase the containing interval or split naturally while retaining the approved story and hard user duration constraint.
+
+Maintain both a continuous global film timeline and local `0…N` request intervals. Multiple generation units are distinct from editorial shot counts. Do not independently round every global timestamp and create gaps. If measured delivery materially changes the screenplay rhythm/length, return the updated artifact to the affected gate before production.
+
+## Prompt order
+
+For each production unit, write one unambiguous instruction:
+
+1. **Continuation only:** request continuation and identify the actual predecessor bound to the video port. The same-scene predecessor must be ready and inspected. No continuation phrase or preceding-scene video for a new scene.
+2. State approved style, location, time/light, character/wardrobe identity, and relevant product state. Resolve every reference mention to the actual attached input.
+3. Give integer unit duration when required and actual supported final frame format/resolution.
+4. For every local interval, specify shot size/camera, visible character action/expression/eyeline, props, composition, exact speaker-labeled words/VO, listening reactions, and the ending pose/state.
+5. State continuity, voice-to-role mapping, lip-sync requirement when applicable, sound/effects/ambience, and unwanted music handling. Keep price/label/CTA microtext editable rather than relying on generated lettering.
+
+No alternative camera plans joined by “or,” no vague “as appropriate,” no additional dialogue or weather that is absent from the approved table. Preserve the whole exchange across cuts; attaching a voice does not license arbitrary spoken text.
+
+## Scene dependencies and canvas layout
+
+Each scene gets its own heading/table with input references, full prompt, generated-video slot/status, and notes. Notes preserve source-row coverage, merge decisions, unresolved dependencies, and model route. Save/read back each written scene and check the full chain afterward.
+
+- First unit: use this scene's character/product/prop/scene image references and required voice inputs; no preceding-scene video.
+- Same-scene continuation: bind the actual previous ready video first through the source-video port, then relevant current image/audio references. Use local timing for the added span and record global offsets.
+- New scene: clear previous video continuation; use its own references and timing.
+
+Before generation, a future video may be shown as an unresolved dependency in the table. The agent must replace it with the actual returned handle when ready; do not instruct the user to paste that handle manually. All textual reference labels must have matching real attachments before dispatch. Check `r2v-audio.md` after assembling the final audio list.

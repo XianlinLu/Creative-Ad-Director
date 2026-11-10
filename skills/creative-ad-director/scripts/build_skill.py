@@ -27,6 +27,7 @@ def build(skill_dir: Path, output: Path) -> None:
 
     included = [skill_dir / "SKILL.md", skill_dir / "agents" / "openai.yaml"]
     included.extend(sorted((skill_dir / "references").glob("*.md")))
+    included.append(skill_dir / "scripts" / "validate_r2v_audio.py")
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:

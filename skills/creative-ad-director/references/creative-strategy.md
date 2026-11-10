@@ -14,9 +14,9 @@ Select one primary promise and one support point for a short ad. A list of six b
 
 ## Four-direction board
 
-Create exactly four materially different concepts `C01–C04` before developing the selected direction. Use at least four of the seven modes below unless the user restricts the mode; within a fixed mode, vary premise, character relationship, conflict, product integration, and ending. Four headlines or four openings for the same scene do not meet this requirement.
+Use this optional exploration only when the user requests alternative ideas or has not supplied a chosen direction. If the user gives an idea or script, develop it directly into a complete script for G1; do not force a concept-selection detour. When exploration is requested, create four materially different concepts `C01–C04` before developing the selected direction. Use at least four of the seven modes below unless the user restricts the mode; within a fixed mode, vary premise, character relationship, conflict, product integration, and ending. Four headlines or four openings for the same scene do not meet this requirement.
 
-For every concept show: audience tension, plot mode, hook, character relationship, setup → escalation → turn → ending, product role/evidence, soft-sell or hard-sell treatment, CTA, asset needs, and feasibility for the selected duration. Recommend one using evidence fit, conversational clarity, production complexity, and reuse potential. Ask the user to select one unless already chosen or delegated.
+For every concept show: audience tension, plot mode, hook, character relationship, setup → escalation → turn → ending, product role/evidence, soft-sell or hard-sell treatment, CTA, asset needs, and feasibility for the selected duration. Recommend one using evidence fit, conversational clarity, production complexity, and reuse potential. Use a native Question for selection unless already chosen or delegated, then write the full selected script and proceed to G1.
 
 ## Soft-sell, hard-sell, and trending structure
 
@@ -42,7 +42,7 @@ Avoid humor that depends on humiliating a customer, mocking disability or protec
 
 Use timing as a diagnostic, not a rigid template.
 
-For a 15-second ad, a useful starting shape is:
+Only when the user requested a 15-second ad, a useful starting shape is:
 
 - `0.0–1.5s` pattern break plus a legible question/problem;
 - `1.5–4.0s` comic setup and product identification;
@@ -52,7 +52,7 @@ For a 15-second ad, a useful starting shape is:
 
 Create a meaningful visual, narrative, or audio change roughly every two to three seconds without sacrificing comprehension. Put the product on screen early unless a deliberate reveal improves clarity. The first frame should work muted; essential claims must not rely only on dialogue.
 
-For 30 seconds, develop the relationship and a second escalation rather than adding filler. For 45/60 seconds, add motivated exchanges and a second turn while planning the native extension handoff. Preserve the conversation across that boundary; follow [model-routing.md](model-routing.md).
+For 30 seconds, develop the relationship and a second escalation rather than adding filler. For a longer story, earn its measured length with motivated exchanges and a second turn while planning per-scene production handoffs. Preserve the conversation across that boundary; follow [model-routing.md](model-routing.md).
 
 ## Hook design
 

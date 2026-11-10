@@ -2,61 +2,52 @@
 
 [简体中文](README.zh-CN.md)
 
-A Lumina Canvas skill for humorous, story-driven marketing videos grounded in product evidence. Version **2.3.0** aligns this repository with the supplied design brief: four distinct concepts, continuous-time storyboards, independent character/voice preparation, real reference bindings, and shot-level repair.
+Version **2.4.0** is an idea-to-video workflow for Lumina Canvas. It writes the user's screenplay first, then runs production automatically between **native Question checkpoints**. It does not ask users to type “continue” after routine tool operations.
 
-## Use cases
+## Production sequence
 
-1. Product launches and performance ads.
-2. TikTok / Douyin short-drama ads.
-3. 15–60 second social marketing creative.
+1. **Complete screenplay → native script review.** Follow the user's idea; derive duration from natural dialogue, action and story rhythm. Honor an explicit duration constraint. Four concept alternatives are optional, not a mandatory detour.
+2. **Character/prop generation → native visual review.** Every visible character gets a landscape **16:9 front/side/back turnaround**, independent of final-video ratio.
+3. **Native voice preference per speaking role → real audition.** Offer concrete voice choices, then generate approximately **20 seconds** of clean speech for each character/narrator.
+4. **Native audition review → exact final dialogue.** Lock approved voices, synthesize the actual screenplay lines, and measure durations.
+5. **Shot Production Master Table → native table review.** Include source-row coverage, boards, measured speech, timing, actions, camera, dialogue, actual input mappings, dependencies, job states, QC and approvals.
+6. **Automatic shot generation and repair → native shot review.** Use each shot's actual character references and approved voice-derived audio. Wait for real predecessor video in same-scene continuations; reset the video dependency at scene changes.
+7. **Native finishing choice → real Video Editor work → native final review.** Assemble approved clips, preserve voices/effects, and apply chosen captions/music.
+8. **Confirm/export → verified playable, downloadable film.** Deliver the actual output and editable project when available.
 
-Not suited to strict replication of protected IP, real-person likenesses or established viral personas; precise opening, dispensing, texture or color reconstruction from still-life images alone; complex ensembles or intense continuous action.
+All choices and revision details use the host's real Question interface, including native custom fields where supported. Replaying existing media does not regenerate it. Each approval is bound to exact visible/playable revisions. User-answer waits remain necessary; there are no approval-by-timeout shortcuts.
 
-## Inputs and workflow
+## Prevent the reported r2v audio errors
 
-Provide a product or URL, optional brand, soft-sell/hard-sell objective, channel, audience, duration, ratio, resolution, and optional product/character/scene/video/voice references. Missing critical information is requested **one question at a time**. Accessible page text is not proof that webpage images have been inspected. White-model renders support geometry, not unobserved materials, mechanics, or efficacy.
+Observed errors for `dreamina-seedance-2-5` in r2v require **each attached audio ≥1.8s** and **combined attached audio ≤30.2s per request**. Prepare with a practical **2.0s minimum / 30.0s total margin**, and verify actual prepared-file durations.
 
-1. Build a sourced product evidence sheet and brief.
-2. Present **four materially different concepts**, then develop the selected one.
-3. Prepare product/character/scene assets and **independent voice auditions**; track actual readiness.
-4. Write the whole scene and compile continuous shot timestamps, preserving conversational relationships and reactions.
-5. Bind actual references in first-appearance order and use the selected native generation route.
-6. Review **people, product, space, sound, and text for every shot**; repair only failed spans and actual dependents.
-7. Verify the editable final cut and actual export. Extra variants require scoped authorization.
+A 20-second audition is for user review; it is not automatically the video input. Two full auditions would total 40 seconds. Derive short clean spoken reference excerpts from approved voices, bind only the current unit's required roles, and count **all** outgoing audio entries, including final dialogue when attached. Do not deduplicate only the accounting while leaving duplicate files in the payload.
 
-## Parameters and model policy
+Use the packaged `scripts/validate_r2v_audio.py` when Python is available, or the same checks with native metadata when it is not. The helper checks measured metadata and role coverage; it does not measure media, prove audio quality, or submit a request. See [audio preflight](skills/creative-ad-director/references/r2v-audio.md). Invalid-parameter requests must be corrected before retry, never replayed unchanged.
 
-- Model: **Seedance 2.5** default; **2.0** legacy compatibility.
-- Duration: **15 / 30 / 45 / 60 seconds**; default 15.
-- Format: **9:16, 1080p** by default.
-- Creative controls: soft-sell/hard-sell, visual style, seven plot modes, optional trending-structure reference.
-- Seven modes: escalating misunderstanding, expectation versus reality, deadpan absurdity, personified problem, failed workarounds, callback, and status reversal. The supplied brief specifies seven modes but does not name them; these operationalize the repository's existing comic engines.
-- 2.5 route: native **4–30 second** base output; continuous timestamps within 30 seconds; **45/60 seconds through native extension** from the ready preceding clip.
-- 2.0 route: each segment **at most 15 seconds**, with planned continuity handoffs.
+## Scope and runtime requirements
 
-These are requested workflow presets, not independently verified provider specifications. Before generation, the skill checks actual tools, model availability, input ports, duration/extension semantics, and resolution. Unsupported capabilities are surfaced; no silent model switch or simulated binding is allowed.
+Use for product launches/performance ads, TikTok/Douyin narrative ads, and social marketing creative. Preserve verified product states: still images do not establish opening, dispensing, paste/cream, exact materials/colors, or efficacy. White models help with geometry only.
+
+Defaults: final film **9:16, 1080p**, Seedance **2.5** preference; **2.0** legacy mode is explicit. Duration follows the story. Verify actual model/mode support and per-unit/extension constraints. Seven comic plot modes remain available for optional exploration.
+
+Full execution requires actual Canvas/Question tools, image/audio/video generation, duration measurement, polling/resume, inspection, Video Editor and export capabilities. A host in Manual mode may require switching to its supported automatic execution mode. The Skill cannot override the host setting, create missing tools, or supply an absent answer callback. Missing capability is a concrete blocker, not a reason to fake native cards or claim completed video.
 
 ## Install
 
-Download [creative-ad-director-v2.3.0.zip](dist/creative-ad-director-v2.3.0.zip), extract it, and import `SKILL.md`, `agents/`, and `references/` into Lumina. The ZIP excludes repository-only scripts and tests. When updating an existing installation, replace or disable the previous imported copy to avoid duplicate discovery.
-
-Example:
-
-> Use Creative Ad Director to turn this product URL into a 30-second, 9:16, 1080p humorous soft-sell ad for TikTok. Show four distinct story concepts first. Preserve natural dialogue and use only product states supported by the references.
+Download [creative-ad-director-v2.4.0.zip](dist/creative-ad-director-v2.4.0.zip) and replace the previous imported Skill. Keep `SKILL.md`, `agents/`, `references/`, and the runtime audio guard under `scripts/` together. Repository-only build/preflight scripts and tests are excluded. In hosts without script execution, the Markdown reference specifies the same preflight checks.
 
 ## Instructions for use (under 1,000 characters)
 
-Create humorous, story-driven marketing videos with Creative Ad Director.
+Turn your idea into a finished marketing video with Creative Ad Director.
 
-1. Share a product URL, photos, white-model renders, or a brief. Upload images if webpage visuals are inaccessible.
-2. Specify your audience, channel, soft-sell or hard-sell goal, duration, ratio, resolution, style, and optional character, scene, video, or voice references. Missing essentials are asked one at a time.
-3. Choose from four distinct concepts across seven plot modes.
-4. Review character visuals, independent voice auditions, and a continuous-time storyboard with natural dialogue.
-5. Generate, review each shot, and refine only failed parts.
+1. Share an idea, script, product URL, or visual references. Add any audience, style, format, or duration constraints.
+2. Review the complete script using Lumina's native Question options. Length follows the story's rhythm unless specified.
+3. Approve 16:9 character turnarounds, choose each speaking role's voice, and listen to real auditions of about 20 seconds.
+4. Approve the shot production table, then review the generated clips and final edit through native options.
+5. Confirm export to receive the verified video.
 
-Defaults: Seedance 2.5, 15 seconds, 9:16, 1080p. Choose 15/30/45/60 seconds; 45/60 use native extension. Seedance 2.0 uses segments up to 15 seconds. Actual tool support is checked first.
-
-Use verified product details. Still images do not prove opening, dispensing, texture, or efficacy. Best for product launches, TikTok/Douyin story ads, and social campaigns.
+The agent advances automatically after each selection; revisions stay inside native cards. It uses shot-specific excerpts from approved voices and checks actual audio durations before generation. Native tools and automatic host execution must be available. Product claims and actions remain limited to supplied evidence.
 
 ## Validate and build
 
@@ -65,7 +56,7 @@ python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-dire
 python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
 python3 skills/creative-ad-director/scripts/build_skill.py \
-  --output dist/creative-ad-director-v2.3.0.zip
+  --output dist/creative-ad-director-v2.4.0.zip
 ```
 
-Static checks validate structure and packaging. Live model capabilities, paid generation, voice binding, native extension, playback QC, and exports require the actual Lumina environment; they are not established by these checks.
+The regression tests cover both reported duration failures, inclusive limits, combined voice/dialogue inputs, duplicate attachments, missing speakers, invalid/unverified durations, and source approval. Static validation is not an end-to-end Lumina run; native cards, actual conditioning, paid video jobs, resume behavior and exports still require live verification.

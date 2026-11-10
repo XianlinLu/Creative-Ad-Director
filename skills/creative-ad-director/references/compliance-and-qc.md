@@ -37,7 +37,7 @@ Do not create dangerous demonstrations, unsafe product use, fake emergency UI, m
 
 ## Pre-production gate
 
-Before Ad Production Review confirm:
+Before G5 Shot Production Master Table Review confirm:
 
 - product model/variant and visual references are real and current;
 - every objective line and visual implication has a claim-map status;
@@ -69,7 +69,7 @@ Never label unseen footage or unheard audio as passed. If playback or audio insp
 
 ## Final editorial QC
 
-Watch the complete current revision with sound and inspect it muted at phone size.
+Watch the complete current revision with sound and inspect it muted at phone size. Prepared shot outputs require native G6 review; the complete edit requires native G8 review. Follow `canvas-artifacts.md` for all choices and revision instructions.
 
 ### Truth and product
 
@@ -89,13 +89,13 @@ Watch the complete current revision with sound and inspect it muted at phone siz
 
 - Correct duration, ratio, resolution, crop, platform safe areas, and no black gaps/duplicate spans.
 - Text is exact, readable, sufficiently long, correctly layered, and not unintentionally generated into the scene.
-- Dialogue is complete and intelligible; lip sync is acceptable where needed.
+- Dialogue is complete and intelligible; each speaker uses the approved voice, no audition sample text is substituted for final lines, no doubled dialogue is present, and lip sync is acceptable where needed.
 - Effects and ambience support the action; music is authorized, balanced, and does not cover speech.
 - Captions match final speech and cuts; disclosures remain visible and legible.
 
 ### Delivery
 
-- Final approval matches the exact editor revision exported.
+- G8 native Question approval matches the exact editor revision exported.
 - Each file opens, plays, and has expected picture/audio/caption state.
 - Variant filenames and manifest map to the correct hook/body/payoff/CTA modules.
 - Download access works; editable draft and supporting artifacts are returned when available.
