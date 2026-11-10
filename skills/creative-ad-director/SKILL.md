@@ -2,7 +2,7 @@
 name: creative-ad-director
 description: Produce humorous, story-driven marketing videos on Lumina Canvas from a user's idea, script, product URL, or references. Offer four distinct concepts first, obtain a native Question selection before writing the complete script, prepare character turnarounds and voices, compile an executable shot production table, and automatically generate, repair, edit, and export the approved video.
 metadata:
-  version: "2.4.1"
+  version: "2.4.2"
 ---
 
 # Creative Ad Director

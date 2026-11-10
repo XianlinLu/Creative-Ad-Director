@@ -23,6 +23,29 @@ REQUIRED_REFERENCES = {
 }
 
 
+SUPPORTED_IMPORT_EXTENSIONS = {".md", ".txt", ".json", ".yaml", ".yml"}
+
+
+def import_files(skill_dir: Path) -> list[Path]:
+    """Only documents and metadata belong in the Lumina import artifact."""
+    files = [skill_dir / "SKILL.md", skill_dir / "agents" / "openai.yaml"]
+    files.extend(sorted(p for p in (skill_dir / "references").rglob("*") if p.is_file()))
+    return files
+
+
+def validate_import_path(relative: Path) -> list[str]:
+    errors = []
+    if relative.is_absolute() or any(part in {".", ".."} for part in relative.parts):
+        return [f"unsafe import path: {relative}"]
+    if relative.suffix not in SUPPORTED_IMPORT_EXTENSIONS:
+        errors.append(f"unsupported import extension: {relative}")
+    for i, part in enumerate(relative.parts):
+        name = Path(part).stem if i == len(relative.parts) - 1 else part
+        if len(part) > 64 or not re.fullmatch(r"[A-Za-z0-9_-]+", name):
+            errors.append(f"invalid import name (ASCII letters/digits/underscore/hyphen, max 64): {relative}")
+    return errors
+
+
 def utf16_units(text: str) -> int:
     return len(text.encode("utf-16-le")) // 2
 
@@ -33,7 +56,7 @@ def validate(skill_dir: Path) -> list[str]:
     agent = skill_dir / "agents" / "openai.yaml"
     refs = skill_dir / "references"
 
-    for required in (skill, agent, refs, skill_dir / "scripts" / "validate_r2v_audio.py"):
+    for required in (skill, agent, refs):
         if not required.exists():
             errors.append(f"missing required path: {required.relative_to(skill_dir)}")
 
@@ -66,6 +89,11 @@ def validate(skill_dir: Path) -> list[str]:
             )
         if "[TODO" in body:
             errors.append(f"{path.relative_to(skill_dir)} contains unfinished TODO text")
+
+    for path in import_files(skill_dir):
+        errors.extend(validate_import_path(path.relative_to(skill_dir)))
+        if path.is_symlink() or not path.resolve().is_relative_to(skill_dir.resolve()):
+            errors.append(f"import file must stay inside the skill: {path.relative_to(skill_dir)}")
 
     return errors
 
