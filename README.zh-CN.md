@@ -2,7 +2,15 @@
 
 [English](README.md)
 
-**v2.4.2：围绕用户想法先给四个差异明显的创意，经原生 Question 选定后写完整剧本；用户只在关键节点点选，Agent 自动完成节点之间的制作。** 不再要求用户在聊天输入框反复输入“继续”。
+**v2.5.0：加入参考片的“精致细节揭幕 → 连续反差演示 → 温情收尾”节奏。** 保留四方向创意、原生选定、完整剧本和节点间自动制作流程。
+
+## 参考片节奏
+
+新增[参考节奏规范](skills/creative-ad-director/references/reference-rhythm.md)，按用户提供的 51.1 秒视频记录画面观察与大致时间段。前段用短特写和较长全貌镜头揭幕；中段每组笑点走“触发—动作—结果”，保留反应停顿；结尾用较长镜头收束情感。
+
+Rhythm Map 节奏表贯穿剧本、镜头总表、生成提示词和剪辑验收，明确短插镜、揭示时刻、结果停留、标题出入与切点。生成片段较长时，在编辑器裁出需要的短镜头；总时长和画幅仍按具体项目确定。
+
+本次已检查视频元数据、全片逐秒画面、场景变化候选帧和片头转场加密采样。仅确认音轨存在，未听辨核实音乐、台词、BPM 或音画卡点，规范中明确区分已观察信息与建议音效。原视频和抽帧均不上传仓库。静态检查不等于 Lumina 成片节奏实测。
 
 ## 正确流程
 
@@ -40,14 +48,14 @@ Agent 保存当前阶段、资产版本、Question ID、任务 ID、输入绑定
 
 ## 导入与验证
 
-下载 [creative-ad-director-v2.4.2.zip](dist/creative-ad-director-v2.4.2.zip)，替换旧导入版本，导入 `SKILL.md`、`agents/`、`references/`。安装包仅包含受支持的 `.md` 和 `.yaml` 文件；全部 Python 脚本与测试只保留在仓库。请勿把仓库源码目录直接当作 Skill 安装包上传。打包器会检查文件扩展名白名单、小写扩展名，以及最多 64 字符的英文字母/数字/下划线/连字符名称。
+下载 [creative-ad-director-v2.5.0.zip](dist/creative-ad-director-v2.5.0.zip)，替换旧导入版本，导入 `SKILL.md`、`agents/`、`references/`。安装包仅包含受支持的 `.md` 和 `.yaml` 文件；全部 Python 脚本与测试只保留在仓库。请勿把仓库源码目录直接当作 Skill 安装包上传。打包器会检查文件扩展名白名单、小写扩展名，以及最多 64 字符的英文字母/数字/下划线/连字符名称。
 
 ```bash
 python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-director
 python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
 python3 skills/creative-ad-director/scripts/build_skill.py \
-  --output dist/creative-ad-director-v2.4.2.zip
+  --output dist/creative-ad-director-v2.5.0.zip
 ```
 
 测试覆盖两种已报告的音频时长失败、边界值、重复音频、声线参考与正式台词总量、缺失角色、无效/未测量时长和未批准声线。静态测试不等于 Lumina 端到端运行；原生卡片、实际声线绑定、付费生成、恢复执行和导出仍需真实环境验证。

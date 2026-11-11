@@ -2,7 +2,13 @@
 
 [简体中文](README.zh-CN.md)
 
-Version **2.4.2** is an idea-to-video workflow for Lumina Canvas. It first offers four distinct concepts around the user's idea, obtains a **native Question selection**, then writes the complete screenplay and runs production automatically between review checkpoints. It does not ask users to type “continue” after routine tool operations.
+Version **2.5.0** adds the owner's reference-video rhythm: premium detail reveal → comic demonstration modules → warm ending. It retains the four concepts, native selection, complete screenplay and automatic production between review checkpoints.
+
+## Reference pacing
+
+The [rhythm guide](skills/creative-ad-director/references/reference-rhythm.md) records visual observations from the supplied 51.1-second reference, approximate section timecodes and evidence limits. A Rhythm Map carries trigger/action/result beats, short inserts, reaction holds, heading cues and a calmer ending through script, shot prompts and the final edit. Longer generation units do not force longer editorial shots. Duration and ratio remain project choices.
+
+Audio presence was verified in metadata; music, speech, BPM and sound synchronization were not perceptually verified. Proposed sound design stays distinct from observed markers. No source video or extracted frames are published. Static validation does not establish that a generated Lumina film matches the reference.
 
 ## Production sequence
 
@@ -35,7 +41,7 @@ Full execution requires actual Canvas/Question tools, image/audio/video generati
 
 ## Install
 
-Download [creative-ad-director-v2.4.2.zip](dist/creative-ad-director-v2.4.2.zip) and replace the previous imported Skill. Import `SKILL.md`, `agents/`, and `references/`. The ZIP contains only supported `.md` and `.yaml` files; all Python scripts and tests stay in the repository. Do not upload the repository source folder as the Skill package. The builder validates supported extensions (`.md`, `.txt`, `.json`, `.yaml`, `.yml`), lowercase extensions, and ASCII names of at most 64 characters before writing the ZIP.
+Download [creative-ad-director-v2.5.0.zip](dist/creative-ad-director-v2.5.0.zip) and replace the previous imported Skill. Import `SKILL.md`, `agents/`, and `references/`. The ZIP contains only supported `.md` and `.yaml` files; all Python scripts and tests stay in the repository. Do not upload the repository source folder as the Skill package. The builder validates supported extensions (`.md`, `.txt`, `.json`, `.yaml`, `.yml`), lowercase extensions, and ASCII names of at most 64 characters before writing the ZIP.
 
 ## Instructions for use (under 1,000 characters)
 
@@ -56,7 +62,7 @@ python3 /path/to/skill-creator/scripts/quick_validate.py skills/creative-ad-dire
 python3 skills/creative-ad-director/scripts/preflight.py
 python3 -m unittest discover -s tests -v
 python3 skills/creative-ad-director/scripts/build_skill.py \
-  --output dist/creative-ad-director-v2.4.2.zip
+  --output dist/creative-ad-director-v2.5.0.zip
 ```
 
 The regression tests cover both reported duration failures, inclusive limits, combined voice/dialogue inputs, duplicate attachments, missing speakers, invalid/unverified durations, and source approval. Static validation is not an end-to-end Lumina run; native cards, actual conditioning, paid video jobs, resume behavior and exports still require live verification.

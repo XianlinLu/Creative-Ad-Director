@@ -20,6 +20,7 @@ REQUIRED_REFERENCES = {
     "autonomous-runner.md",
     "r2v-audio.md",
     "shot-prompt-compiler.md",
+    "reference-rhythm.md",
 }
 
 

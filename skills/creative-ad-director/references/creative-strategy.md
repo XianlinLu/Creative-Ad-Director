@@ -44,7 +44,9 @@ Avoid humor that depends on humiliating a customer, mocking disability or protec
 
 ## Retention rhythm
 
-Use timing as a diagnostic, not a rigid template.
+Read [reference-rhythm.md](reference-rhythm.md) for the owner's built-in reference preference: selective detail reveal, a hero/name reset, recurring comic demonstrations, then a warmer and calmer ending. Use its evidence table and duration adaptations when developing all four concepts. The selected screenplay gets a versioned Rhythm Map beside it at G1; do not pre-write a complete screenplay before G0. A newer user pacing instruction overrides this preference.
+
+Use timing as a diagnostic, not a rigid template. A change of information or action need not be a cut; retain a result or emotional hold when the viewer needs it.
 
 Only when the user requested a 15-second ad, a useful starting shape is:
 

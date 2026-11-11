@@ -17,6 +17,7 @@ Save one scene heading and table per scene plus an overall ordered index. This i
 | Scene / shot / generation unit | Stable IDs and source script rows/line IDs; exact merge coverage |
 | Board / starting frame | Real current handle/revision or explicit not-needed reason |
 | Timing | Measured final speech, action/reaction allowance, unit/shot duration, continuous global start/end, local integer intervals where required |
+| Rhythm / editorial map | Rhythm Map revision and beat ID; narrative job; editorial duration distinct from generation duration; trigger/reveal/result time; minimum reaction hold; cut cue; heading in/out; sound marker evidence status |
 | Picture and blocking | Who/what is where; expression, action, eyeline, props, product use state, opening/ending state |
 | Camera and format | Shot size, angle/motion, final ratio, resolution, safe areas |
 | Exact speech | Speaker → listener; exact dialogue/VO, performance and reaction; silent if none |
@@ -53,6 +54,8 @@ When required shots are approved, collect the finishing choice through G7 unless
 4. Apply requested music treatment; duck it under speech and retain comic pauses. Use observed playback/waveform timing, not invented BPM.
 5. Generate captions from final actual dialogue timing and recalculate after trims/module swaps. Check readable dwell, safe areas, typography and spelling at phone size.
 6. Save and play the full revision with sound, inspect every transition and final frame, then present native G8.
+
+Apply [reference-rhythm.md](reference-rhythm.md) to the actual edit: trim independently framed inserts from longer generated clips, retain readable demonstration results, and slow the emotional ending. Save actual source-in/out and timeline cuts against the approved Rhythm Map. Use actual supported editor precision; native integer generation durations must not quantize final cuts. Check heading timing separately from dialogue captions and distinguish verified audio accents from proposed sound design. Show rhythm deviations with the existing G8 preview and repair only affected spans.
 
 For captions-only finishing, operate on an existing assembled timeline. If none exists, ask the native finishing choice to resolve the mismatch rather than delivering disconnected captioned shots as a completed film.
 

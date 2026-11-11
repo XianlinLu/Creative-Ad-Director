@@ -2,7 +2,7 @@
 name: creative-ad-director
 description: Produce humorous, story-driven marketing videos on Lumina Canvas from a user's idea, script, product URL, or references. Offer four distinct concepts first, obtain a native Question selection before writing the complete script, prepare character turnarounds and voices, compile an executable shot production table, and automatically generate, repair, edit, and export the approved video.
 metadata:
-  version: "2.4.2"
+  version: "2.5.0"
 ---
 
 # Creative Ad Director
@@ -18,6 +18,7 @@ Capture product/optional brand, idea, soft/hard-sell goal, audience, channel, la
 - **Four concepts first:** develop exactly four materially different creative interpretations of the user's idea, save/show them, and obtain a real native **G0 创意方向选择** answer before writing the complete script. Preserve the user's product, intent, constraints, and supplied facts across all four. Skip G0 only when the user explicitly requests direct execution of an existing definite script; merely supplying an idea or draft script, asking for automation, or delegating routine work does not qualify. Record the explicit bypass instruction and script revision. See [creative-strategy.md](references/creative-strategy.md).
 - **Duration follows the screenplay:** account for natural speech, actions, reactions, pauses, and CTA dwell. Give a provisional duration at script review, then refine from measured final speech before shot-table review. Do not force 15 seconds or round the whole film to 15/30/45/60. Explicit user duration is a constraint; substantial story/duration changes return to script review.
 - Default final-video format is **9:16, 1080p** unless specified. Character three-view sheets are **16:9**, independently of final-video format.
+- **Reference rhythm:** for new projects use the owner's detail reveal → comic demonstrations → warm ending preference in [reference-rhythm.md](references/reference-rhythm.md), unless the user chooses another rhythm. Read it before concepts/scripts, shot compilation and editing. Preserve its fast/slow contrast and action/result holds; do not force the reference's duration, cast or format. Carry a versioned Rhythm Map from G1 through G5 to G8.
 - Prefer **Seedance 2.5**, with explicit **2.0** legacy mode. Discover actual capabilities before dispatch; follow [model-routing.md](references/model-routing.md). A policy preference is not proof of API support.
 - All checkpoints, repair selections, voice preferences, and custom adjustments use real Lumina **Question** UI. No Markdown checkbox imitation, HTML replica, or “reply A/B in chat.” See [canvas-artifacts.md](references/canvas-artifacts.md).
 

@@ -1,6 +1,6 @@
 # Compile the approved table into scene-specific prompts
 
-Use the supplied references for workflow structure only. Never import their illustrative plots, characters, locations, dialogue, or visual style into a user's film. The approved current screenplay and production table are the content authority.
+Use bundled examples for workflow structure only. A user-selected reference may also authorize its pacing and visual treatment; [reference-rhythm.md](reference-rhythm.md) defines the owner's current pacing preference and evidence limits. Never automatically import illustrative plots, characters, locations or dialogue. The approved current screenplay and production table are the content authority.
 
 ## Reconcile source rows before writing
 
@@ -9,6 +9,8 @@ Read the scene and adjacent rows; retain source row/line IDs, exact speech, shot
 Consider merging a sub-4-second editorial shot with adjacent compatible action only when scene/time/place, characters, wardrobe, lighting, and camera intent remain coherent and all source content survives. Never merge across a new scene or erase an independent reveal, reaction hold, or punchline just to meet a tool's minimum duration. Record source-row coverage for every merged unit. An editorial shot can remain short inside a longer supported generation unit.
 
 ## Timing
+
+Read the approved Rhythm Map with source rows. Carry each beat's trigger, reveal, result hold and cut cue into the local action plan. Preserve sub-second editorial targets on a separate edit map even when the provider requires integer requests. Longer generation units supply usable ranges; they do not authorize lengthening every short insert. If internal cuts cannot be controlled reliably, prepare separately framed sources for editor assembly. Preserve the opening reveal, repeated demonstrations and calmer finish when that profile is selected.
 
 Measure exact final speech first. Allocate action, transitions, breath, and reaction time. Merge compatible rows before rounding. For a provider expecting integer seconds, use half-up rounding for provisional timings, then reconcile to a feasible sequence: each local request starts at 0, each interval starts at the previous end, no interval has zero/negative duration, and the final end equals the unit duration. Never round into less room than actual dialogue/action requires; increase the containing interval or split naturally while retaining the approved story and hard user duration constraint.
 
