@@ -2,7 +2,7 @@
 name: creative-ad-director
 description: Produce humorous, story-driven marketing videos on Lumina Canvas from a user's idea, script, product URL, or references. Offer four distinct concepts first, obtain a native Question selection before writing the complete script, prepare character turnarounds and voices, compile an executable shot production table, and automatically generate, repair, edit, and export the approved video.
 metadata:
-  version: "2.5.0"
+  version: "2.5.1"
 ---
 
 # Creative Ad Director
@@ -17,7 +17,9 @@ Capture product/optional brand, idea, soft/hard-sell goal, audience, channel, la
 
 - **Four concepts first:** develop exactly four materially different creative interpretations of the user's idea, save/show them, and obtain a real native **G0 创意方向选择** answer before writing the complete script. Preserve the user's product, intent, constraints, and supplied facts across all four. Skip G0 only when the user explicitly requests direct execution of an existing definite script; merely supplying an idea or draft script, asking for automation, or delegating routine work does not qualify. Record the explicit bypass instruction and script revision. See [creative-strategy.md](references/creative-strategy.md).
 - **Duration follows the screenplay:** account for natural speech, actions, reactions, pauses, and CTA dwell. Give a provisional duration at script review, then refine from measured final speech before shot-table review. Do not force 15 seconds or round the whole film to 15/30/45/60. Explicit user duration is a constraint; substantial story/duration changes return to script review.
-- Default final-video format is **9:16, 1080p** unless specified. Character three-view sheets are **16:9**, independently of final-video format.
+- Default **every generated scene/continuation clip and final export to 16:9, 720p (1280×720)** unless the user explicitly specifies another format. Character three-view sheets remain **16:9**. Apply the format to actual generation parameters, not only the edit/export.
+- **Dialogue on, background music off:** keep video audio generation enabled for scripted character dialogue and approved narration, with approved voices and lip sync. Every video prompt must prohibit background music, score and musical stings; retain only required speech, sound effects and ambience. Do not mute the entire audio track or add music in post-production.
+- **Scene-based generation:** one scene of **≤30s** uses one direct base request when supported, including its internal shot changes. A scene of **>30s** uses a base plus sequential same-scene continuations from each actual immediately preceding video; every continuation prompt includes **“续写这个@视频”** with a real video binding and the next approved table rows. Each new scene resets this chain. See [model-routing.md](references/model-routing.md).
 - **Reference rhythm:** for new projects use the owner's detail reveal → comic demonstrations → warm ending preference in [reference-rhythm.md](references/reference-rhythm.md), unless the user chooses another rhythm. Read it before concepts/scripts, shot compilation and editing. Preserve its fast/slow contrast and action/result holds; do not force the reference's duration, cast or format. Carry a versioned Rhythm Map from G1 through G5 to G8.
 - Prefer **Seedance 2.5**, with explicit **2.0** legacy mode. Discover actual capabilities before dispatch; follow [model-routing.md](references/model-routing.md). A policy preference is not proof of API support.
 - All checkpoints, repair selections, voice preferences, and custom adjustments use real Lumina **Question** UI. No Markdown checkbox imitation, HTML replica, or “reply A/B in chat.” See [canvas-artifacts.md](references/canvas-artifacts.md).
@@ -66,19 +68,19 @@ Record source script rows, stable shot IDs, continuous global timing and local i
 
 Automatically submit ready rows, track accepted jobs, prepare sound, inspect outputs, and repair failures. Use only each shot's visible characters and audible speaker/narrator mappings. Bind actual current character images and approved voice-derived audio to supported ports; keep speaker assignment explicit. Check every outgoing audio against [r2v-audio.md](references/r2v-audio.md) before dispatch. Purely editorial narration is added on its mapped track, not falsely claimed as native conditioning.
 
-For same-scene continuation, await the real predecessor video, inspect its ending, bind it first as the source video, then current required references. New scenes start from their own references and clear the previous-scene video dependency. Never submit “pending video” or a typed @mention as an actual asset.
+For a scene over 30 seconds, follow the approved scene partition and include “续写这个@视频” in each continuation prompt. For same-scene continuation, await the real predecessor video, inspect its ending, bind it first as the source video, then current required references. New scenes start from their own references and clear the previous-scene video dependency. Never submit “pending video” or a typed @mention as an actual asset.
 
-Read [compliance-and-qc.md](references/compliance-and-qc.md). Check **people, product, space, sound, text** per shot. Remove unwanted generated music while preserving speech/effects/ambience. Show real playable prepared clips via **G6**, individually or an explicit batch whose exact revisions are all available for review. Record approval per shot; repair only rejected/failed units and actual dependents. Continue producing independent approved-scope work while a gate waits if the host supports it.
+Read [compliance-and-qc.md](references/compliance-and-qc.md). Check **people, product, space, sound, text** per shot. Verify audible scripted dialogue with the correct voices and no background music. Remove any generated music while preserving speech/effects/ambience. Show real playable prepared clips via **G6**, individually or an explicit batch whose exact revisions are all available for review. Record approval per shot; repair only rejected/failed units and actual dependents. Continue producing independent approved-scope work while a gate waits if the host supports it.
 
 ### 7. Approved shots → G7 后期方式 → automatic edit → G8 成片确认
 
-Call native **G7** for editing mode unless already specifically chosen: assemble + captions (recommended), assemble only, captions only on an existing assembled timeline, or in-card customization. Use the real native Video Editor, ready approved clips, exact source ranges, separate speech/effects/music/caption tracks, and unchanged approved voice identities. Do not ask “shall I open the editor?”
+Call native **G7** for editing mode unless already specifically chosen: assemble + captions (recommended), assemble only, captions only on an existing assembled timeline, or in-card customization. Use the real native Video Editor, ready approved clips, exact source ranges, separate speech/effects/caption tracks and no background-music track, and unchanged approved voice identities. Do not ask “shall I open the editor?”
 
 Show the complete playable current edit with sound, then call native **G8**: confirm/export, targeted revision, or replay. A revision returns only affected work to review. Confirm/export immediately starts real export and observes it to completion.
 
 ### 8. Verify delivery
 
-Verify exported media actually plays and downloads, covers all required shots, and has the approved timing, format, resolution, captions, dialogue, music, and sound effects. Return actual video(s), editable draft, and production/evidence manifests when available. A prompt package, queued render, or editor acknowledgment is not a delivered film. Publishing/campaign spending remains separately authorized.
+Verify exported media actually plays and downloads, covers all required shots, and has the approved timing, format, resolution, captions, audible dialogue, absence of background music, and sound effects. Return actual video(s), editable draft, and production/evidence manifests when available. A prompt package, queued render, or editor acknowledgment is not a delivered film. Publishing/campaign spending remains separately authorized.
 
 ## Hard boundaries
 

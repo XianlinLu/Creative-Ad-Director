@@ -18,8 +18,8 @@ Default labels below are localized to the user's language. Every adjustment is o
 | G3 角色音色方案 | Named role, character image if visible, 2–3 described voice choices | 推荐方案 / 另一具体方案 / 自定义音色 | Save that role's choice; generate ~20s clean audition; continue outstanding roles |
 | G4 角色试音确认 | Playable, role-labeled real auditions and durations | 全部通过 / 调整指定声音 / 再听一次 | Lock voices; generate/measure final lines; compile full shot table |
 | G5 镜头生产总表确认 | Complete saved table, source mapping, boards, timing, input bindings/dependencies | 按此表生成分镜 / 调整指定镜头 / 重新查看 | Dispatch ready shot jobs and monitor automatically |
-| G6 分镜成片确认 | Actual current playable prepared shot(s), with correct dialogue and no unwanted model music | 通过当前镜头或明确列出的批次 / 调整指定镜头 / 重播 | Approve listed revisions only; continue remaining shots or post-production |
-| G7 后期制作方式 | Ordered approved shot inventory and proposed finishing scope | 剪辑拼接＋字幕 / 仅剪辑拼接 / 仅添加字幕 / 自定义 | Execute selected native editor operations; captions-only requires an existing assembled timeline |
+| G6 分镜成片确认 | Actual current playable prepared shot(s), with audible correct dialogue, no background music, and verified requested format (default 16:9 / 720p) | 通过当前镜头或明确列出的批次 / 调整指定镜头 / 重播 | Approve listed revisions only; continue remaining shots or post-production |
+| G7 后期制作方式 | Ordered approved scene/shot inventory and proposed finishing scope; preserve dialogue, no background music | 剪辑拼接＋字幕 / 仅剪辑拼接 / 仅添加字幕 / 自定义 | Execute selected native editor operations; captions-only requires an existing assembled timeline |
 | G8 成片确认 | Full playable current edit with sound | 确认并导出下载 / 局部修改 / 再看一次 | Export exactly approved revision, verify output, deliver |
 
 G0 is required by default. Skip it only for an explicit user instruction to directly execute an existing definite script, recording the instruction and script revision. A supplied idea/draft, a recommendation, or a general automation request does not bypass G0. If four options exceed the real tool limit, use native sequential choices that expose all four concepts. A valid existing G0 answer for the current board is reused on resume.

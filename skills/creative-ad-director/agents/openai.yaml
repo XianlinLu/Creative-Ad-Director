@@ -1,4 +1,4 @@
 interface:
   display_name: "Creative Ad Director"
-  short_description: "Direct comic ads with reference rhythm and native reviews"
-  default_prompt: "Use $creative-ad-director to offer four distinct concepts around my idea, let me select one through a native Question, then write the complete script and automatically produce the video through native Question reviews for characters, voices, the shot production table, clips, and final edit."
+  short_description: "Create scene-based 720p ads with dialogue and no music"
+  default_prompt: "Use $creative-ad-director to offer four distinct concepts around my idea, let me select one through a native Question, then write the complete script and automatically produce the video through native Question reviews for characters, voices, the shot production table, clips, and final edit. Generate 16:9, 720p video with audible dialogue and no background music. Generate each supported scene up to 30 seconds directly; for longer scenes, bind each preceding actual video and use 续写这个@视频 to continue the approved table. Start new scenes independently."

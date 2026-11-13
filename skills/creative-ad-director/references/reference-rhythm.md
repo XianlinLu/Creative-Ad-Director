@@ -6,7 +6,7 @@ Read before G0/G1, shot-table compilation, and editing when using the built-in r
 
 Reference ID: `RR01`. Owner-supplied file: `6月16日(1)_2026-06-17_18-38-13.mp4`, inspected on 2026-11-11. Container metadata: **51.100 seconds, 1920×1080, 30 fps**, with a stereo AAC stream. Visual review used full-duration one-second frame samples, scene-change candidates, and quarter-second samples around the opening title transition. Fast movement can trigger scene detection; its candidates are not an exact shot count. The ranges below are approximate visual section boundaries, not a frame-accurate EDL.
 
-Audio content, words, music genre, BPM, musical accents, and exact sound/cut synchronization were **not perceptually verified**. Do not report them as observed. Listen in the active host before matching soundtrack timing; otherwise create an original sound plan and label its markers as proposed. Neither the private source video nor extracted stills are bundled or published with the skill.
+Audio content, words, music genre, BPM, musical accents, and exact sound/cut synchronization were **not perceptually verified**. Do not report them as observed. Use dialogue, effects and ambience for the sound plan, labeling unverified markers as proposed. The current no-background-music rule overrides any soundtrack imitation; do not add music to match this reference. Neither the private source video nor extracted stills are bundled or published with the skill.
 
 | Source time, approximately | Observed picture | Transferable rhythm |
 |---|---|---|
@@ -52,11 +52,11 @@ Save a **Rhythm Map vN** beside the script. Link it at G1, then refine it with m
 
 Mark times as planned or measured. Audio markers must be `proposed`, `observed`, or `unverified`; never use an unverified marker as proof of beat matching. Add a short rationale when deviating from the contour.
 
-Compile each generation unit with the required opening state, action progression, reveal and final reaction/pose. Preserve editorial subshots separately from native generation duration: a 1.2s insert may be trimmed from a longer supported source clip. When a model cannot reliably execute several internal cuts, generate independently framed sources and perform the cuts in Video Editor. Do not stretch all inserts to the provider minimum, merge different scene identities, or force same-scene continuation across the studio/domestic reset. Keep the existing integer-timing rules for native requests; use real frame/time precision for the final edit.
+Compile each generation unit with the required opening state, action progression, reveal and final reaction/pose. Preserve editorial subshots separately from native generation duration: a 1.2s insert may be trimmed from a longer supported source clip. When a model cannot reliably execute several internal cuts, propose a concrete alternative through native Question before changing the approved scene-based generation route. Do not silently break a supported ≤30s scene into independent jobs. Do not stretch all inserts to the provider minimum, merge different scene identities, or force same-scene continuation across the studio/domestic reset. Keep the existing integer-timing rules for native requests; use real frame/time precision for the final edit.
 
 ## Editing and acceptance
 
-Create an edit map from actual source ranges to the approved rhythm map. Cut on completed information/action or a deliberately motivated reveal. Preserve result and emotional holds before adjusting picture to music. Add the short feature heading near its trigger/reveal, then let the action breathe; headings are separate editable graphics, not dialogue subtitles. Respect an explicit no-overlay request and resolve any ambiguity through the existing G7 scope choice.
+Create an edit map from actual source ranges to the approved rhythm map. Cut on completed information/action or a deliberately motivated reveal. Preserve result and emotional holds using action/dialogue timing; do not introduce background music to drive the cuts. Add the short feature heading near its trigger/reveal, then let the action breathe; headings are separate editable graphics, not dialogue subtitles. Respect an explicit no-overlay request and resolve any ambiguity through the existing G7 scope choice.
 
 Check the actual G8 preview against the map:
 
